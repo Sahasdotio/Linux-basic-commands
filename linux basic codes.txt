@@ -1,0 +1,118 @@
+# 📦 System & Package Management
+sudo apt update              # Refresh package list
+sudo apt upgrade             # Upgrade installed packages
+sudo apt install <package>   # Install a package
+sudo apt remove <package>    # Remove a package
+sudo apt-cache search <keyword>  # Search for a package
+sudo apt autoremove          # Remove unused dependencies
+
+# 📂 Directory & Navigation
+pwd                          # Print current working directory
+ls                           # List files in current directory
+ls -l                        # Long listing format
+ls -a                        # List all files including hidden
+cd <dir>                     # Change to a directory
+cd ..                        # Go back one directory
+cd ~                         # Go to home directory
+mkdir <dir>                  # Create a new directory
+rmdir <dir>                  # Remove an empty directory
+tree                         # Visual directory structure (if installed)
+
+# 📄 File Operations
+touch <file>                 # Create an empty file
+echo "text" > file.txt        # Write text to file (overwrite)
+echo "text" >> file.txt       # Append text to file
+cat <file>                   # Show file content
+cp <source> <dest>           # Copy file or directory (add -r for dir)
+mv <source> <dest>           # Move or rename file
+rm <file>                    # Delete a file
+rm -r <directory>            # Delete directory and contents
+nano <file>                  # Edit file in terminal editor
+vim <file>                   # Open file in Vim editor
+stat <file>                  # Show file info (size, permissions)
+
+# 📃 Viewing Files
+head <file>                  # Show first 10 lines of file
+tail <file>                  # Show last 10 lines of file
+tail -f <file>               # Follow file updates (logs)
+less <file>                  # View file with navigation
+diff file1 file2             # Compare two files line-by-line
+wc -l <file>                 # Count number of lines
+wc -w <file>                 # Count number of words
+
+# 📊 System Information
+uname -a                     # Show system info
+uptime                       # Show how long system is running
+df -h                        # Show disk usage
+du -sh *                     # Show size of all files/folders
+free -h                      # Show memory usage
+top                          # Show running processes
+htop                         # Interactive process viewer (better top)
+who                          # Show who is logged in
+hostname                     # Display system hostname
+
+# 📡 Networking
+ip a                         # Show IP addresses
+ping <address>               # Check network connectivity
+curl <url>                   # Download page content
+wget <url>                   # Download a file
+netstat -tulnp               # Show open ports and processes
+ss -tulnp                    # Modern netstat alternative
+
+# 📜 Process Management
+ps aux                       # List all running processes
+kill <PID>                   # Terminate process by PID
+killall <process_name>       # Kill all instances of a process
+sleep <seconds>              # Pause for given time
+jobs                         # Show background jobs
+fg                           # Bring job to foreground
+bg                           # Resume suspended job in background
+
+# 📑 Permissions & Ownership
+chmod <mode> <file>          # Change file permissions
+chown <user>:<group> <file>  # Change file ownership
+umask                        # Show default permission mask
+
+# 📦 Bash Scripting
+#!/bin/bash                  # Bash shebang line
+echo "Hello, World!"         # Print message
+name="Sahas"                 # Declare a variable
+echo "Hello $name"           # Use a variable
+if [ $1 -gt 10 ]; then echo "Big"; else echo "Small"; fi  # If-else
+for i in {1..5}; do echo $i; done  # Loop from 1 to 5
+
+# 📂 File Search & Filters
+find . -name "*.sh"          # Find all .sh files recursively
+grep "text" file.txt         # Search for 'text' in file
+grep -i "text" file.txt      # Case-insensitive search
+grep -r "text" /path         # Search text in directory
+sort file.txt                # Sort lines in a file
+uniq file.txt                # Remove duplicate lines
+
+# 📄 Archive & Compression
+tar -cvf archive.tar dir/    # Archive a directory
+tar -xvf archive.tar         # Extract archive
+gzip file.txt                # Compress file
+gunzip file.txt.gz           # Decompress file
+zip archive.zip file.txt     # Zip a file
+unzip archive.zip            # Unzip file
+
+# 📥 Redirects & Pipes
+echo "Hello" > file.txt      # Output to file (overwrite)
+echo "Hello" >> file.txt     # Append to file
+cat file.txt | grep "text"   # Pipe output to another command
+sort file.txt | uniq         # Sort then remove duplicates
+
+# 📦 Disk Usage
+du -sh /home                 # Show total size of /home
+ncdu                         # Interactive disk usage viewer
+
+# 📦 Shortcuts (Terminal)
+# Ctrl + C    Cancel command
+# Ctrl + Z    Suspend command
+# Ctrl + L    Clear terminal screen
+# Ctrl + D    Logout/Exit shell
+# !!          Repeat last command
+# !n          Run nth command from history
+# history     Show command history
+# Tab         Auto-complete
